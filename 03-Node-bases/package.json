@@ -11,5 +11,8 @@
     "url": "https://github.com/blotin1993/nodejs/tree/main/03-Node-bases"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
 }

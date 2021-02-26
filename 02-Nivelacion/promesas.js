@@ -37,7 +37,7 @@ const getEmpleadoById = (id) => {
     }) 
 }
 
-const getSueldoById = (id, callback) => {
+const getSueldoById = (id) => {
 
     return new Promise((resolve, reject) => {
 

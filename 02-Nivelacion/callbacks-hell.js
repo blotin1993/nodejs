@@ -36,6 +36,7 @@ const getEmpleadoById = (id, callback) => {
 }
 
 const getSueldoById = (id, callback) => {
+    
     const sueldo = sueldos.find( (s) => s.id === id)
 
     if (sueldo) {
