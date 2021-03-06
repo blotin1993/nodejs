@@ -11,9 +11,13 @@ const getData = () => {
     if (!fs.existsSync()) {
         return null
     }
-    const data = fs.readFileSync(name)
+    const data = fs.readFileSync(name, {encoding: 'utf8'})
 
-    return JSON.parse(fs.readFileSync(name))
+    if (!data) {
+        return null
+    }
+
+    return JSON.parse(fs.readFileSync(name)) 
 
 }
 

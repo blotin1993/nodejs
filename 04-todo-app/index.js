@@ -5,9 +5,11 @@ const TaskRepository = require('./repositories/TaskRepository')
 
 const main = async() => {
     const taskRepository = new TaskRepository()
+    let option = ''
 
     do {
-        let option = await inquirerMenu()
+        option = await inquirerMenu()
+
         switch (option) {
             case 1:
                 const title = await inquirerInput('Task title')
@@ -16,12 +18,12 @@ const main = async() => {
             case 2:
                 const allTasks = taskRepository.getAllTasks()
                 break
-            case 'X':
+            case 0:
             break
             default:
                 break
         }
-    } while (option !== 'X') {
+    } while (option !== 0) {
         
     }
 

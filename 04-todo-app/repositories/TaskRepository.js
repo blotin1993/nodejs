@@ -1,13 +1,18 @@
-const { saveData } = require('../helpers/fileManager')
+const { saveData, getData } = require('../helpers/fileManager')
 const Task = require('../models/Task')
 
 
 //clase repositorio manipula base de datos 
 class TaskRepository {
-    _tasks = [] //guion bajo -> privado
+    _tasks = null //guion bajo -> privado
     
     constructor() {
-        this._tasks = []
+        const data = getData();
+        if(data){
+            this._tasks = data;
+        } else {
+            this._tasks = [];
+        }
     }
 
     getAllTasks() {

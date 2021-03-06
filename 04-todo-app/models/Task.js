@@ -1,4 +1,4 @@
-const { uuid } = require('uuidv4');
+const { v4: uuidv4 } = require('uuid');
 
 class Task {
     id = ''
@@ -8,10 +8,10 @@ class Task {
     finished = null
 
     constructor(title) {
-        this.id = uuid() //TODO: asignar id
+        this.id = uuidv4() //TODO: asignar id
         this.title = title
         this.done = false
-        created = new Date()
+        this.created = new Date()
 
     }
 }
