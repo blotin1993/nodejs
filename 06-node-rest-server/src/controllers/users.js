@@ -17,7 +17,7 @@ const getAllUsers = (req = Request, res) => {
             name: 'Juan'
         }
     ]
-   
+   res.json(users)
 }
 
 /**

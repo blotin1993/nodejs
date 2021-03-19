@@ -11,7 +11,7 @@ const router = Router()
 
 router.get('/', getAllUsers)
 router.post('/', createUser)
-router.put('/:id', updateUser)
+router.put(':id', updateUser)
 router.patch(':id', updatePartialUser)
 router.delete(':id', deleteUser)
 
